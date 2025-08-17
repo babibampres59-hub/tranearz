@@ -1,0 +1,7 @@
+{
+  "name": "Admin Dashboard - Database Desa",
+  "description": "A web application for village officials to manage resident data, aid distribution, announcements, and data change requests. This serves as the admin panel for the Desa Digital ecosystem.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

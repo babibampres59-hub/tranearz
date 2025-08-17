@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard - Database Desa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <style>
+      #splash-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #f8fafc; /* slate-50 */
+        z-index: 9999;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        transition: opacity 0.5s ease-out;
+        opacity: 1;
+      }
+      #splash-screen.fade-out {
+        opacity: 0;
+      }
+      #splash-logo {
+        width: 100px;
+        height: 100px;
+      }
+      #splash-screen h1 {
+        font-family: 'Inter', sans-serif;
+        font-weight: 700;
+        font-size: 1.875rem; /* text-3xl */
+        color: #0f172a; /* slate-900 */
+        margin-top: 1rem;
+        letter-spacing: -0.025em;
+      }
+      /* Simple prose styles for markdown rendering */
+      .prose {
+        line-height: 1.6;
+      }
+      .prose ul {
+        list-style-type: disc;
+        padding-left: 1.5rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+      .prose strong {
+        font-weight: 600;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            borderRadius: {
+              'xl': '0.75rem',
+              '2xl': '1rem',
+              '3xl': '1.5rem',
+            },
+            colors: {
+              blue: {
+                50: '#eff6ff',
+                100: '#dbeafe',
+                200: '#bfdbfe',
+                300: '#93c5fd',
+                400: '#60a5fa',
+                500: '#3b82f6',
+                600: '#2563eb',
+                700: '#1d4ed8',
+                800: '#1e40af',
+                900: '#1e3a8a',
+                950: '#172554',
+              },
+              slate: {
+                50: '#f8fafc',
+                100: '#f1f5f9',
+                200: '#e2e8f0',
+                300: '#cbd5e1',
+                400: '#94a3b8',
+                500: '#64748b',
+                600: '#475569',
+                700: '#334155',
+                800: '#1e293b',
+                900: '#0f172a',
+              },
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "react": "https://esm.sh/react@^19.1.1",
+    "chart.js": "https://esm.sh/chart.js@^4.4.3",
+    "react-chartjs-2": "https://esm.sh/react-chartjs-2@^5.2.0",
+    "html5-qrcode": "https://esm.sh/html5-qrcode@2.3.8",
+    "@google/genai": "https://esm.sh/@google/genai"
+  }
+}
+</script>
+</head>
+  <body class="bg-slate-100 antialiased">
+    <div id="splash-screen">
+      <div id="splash-logo">
+        <svg viewBox="0 0 100 100" class="w-full h-full">
+            <defs>
+              <linearGradient id="logoGradientSplash" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color: #2563eb; stop-opacity: 1" />
+                <stop offset="100%" style="stop-color: #60a5fa; stop-opacity: 1" />
+              </linearGradient>
+            </defs>
+            <path d="M50 2.5 L93.3 26.25 V73.75 L50 97.5 L6.7 73.75 V26.25 Z" fill="url(#logoGradientSplash)" stroke="#1e3a8a" stroke-width="3"></path>
+            <text x="50" y="62" fontFamily="Inter, sans-serif" font-size="50" font-weight="bold" fill="white" text-anchor="middle" letter-spacing="-2">A</text>
+        </svg>
+      </div>
+      <h1>Admin Desa</h1>
+    </div>
+    <div id="root"></div>
+  </body>
+</html>
