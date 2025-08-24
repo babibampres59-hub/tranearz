@@ -11,7 +11,7 @@ import Riwayat from './Riwayat';
 import Umkm from './Umkm';
 import Adminduk from './Adminduk';
 import SmartAssistant from './SmartAssistant';
-import { LogoutIcon } from '../constants';
+import { LogoutIcon, ArrowTopRightOnSquareIcon } from '../constants';
 import Button from './ui/Button';
 import { useData } from '../hooks/useMockData';
 
@@ -30,6 +30,17 @@ export const PageLayout: React.FC<PageProps> = ({ title, children, onLogout, hea
                 <h1 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">{title}</h1>
                 <div className="flex items-center gap-2 self-end sm:self-center">
                     {headerActions}
+                    <a
+                        href="#" 
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center border border-transparent font-semibold rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-100 transition-all duration-150 active:scale-95 bg-slate-200 text-slate-700 hover:bg-slate-300 focus:ring-slate-500 px-3 py-1.5 text-sm !p-2.5 sm:!px-3 sm:!py-1.5 flex items-center gap-2"
+                        aria-label="Lihat Aplikasi Publik"
+                        title="Lihat Aplikasi Publik (ganti # dengan URL asli)"
+                    >
+                        <ArrowTopRightOnSquareIcon className="w-5 h-5 sm:w-4 sm:h-4" />
+                        <span className="hidden sm:inline">Lihat App</span>
+                    </a>
                     <Button 
                         onClick={onLogout} 
                         variant="secondary" 
